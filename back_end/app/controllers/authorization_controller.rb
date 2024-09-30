@@ -31,4 +31,8 @@ class AuthorizationController < ApplicationController
             cookies.delete(:jwt)
             render json: {}
         end
+
+        def test
+            render json: params
+        end
 end
