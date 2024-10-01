@@ -1825,26 +1825,26 @@
               <option value="lib" />
             </list>
           </option>
-          <option name="url" value="file://$MODULE_DIR$/vendor/bundle/ruby/3.3.0/gems/nokogiri-1.16.7-arm64-darwin" />
+          <option name="url" value="file://$MODULE_DIR$/vendor/bundle/ruby/3.3.0/gems/nokogiri-1.16.7-x86_64-linux" />
           <option name="version" value="1.16.7" />
         </properties>
         <CLASSES>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/3.3.0/gems/nokogiri-1.16.7-arm64-darwin/bin" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/3.3.0/gems/nokogiri-1.16.7-arm64-darwin/ext" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/3.3.0/gems/nokogiri-1.16.7-arm64-darwin/lib" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/3.3.0/gems/nokogiri-1.16.7-arm64-darwin/gumbo-parser" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/3.3.0/gems/nokogiri-1.16.7-x86_64-linux/bin" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/3.3.0/gems/nokogiri-1.16.7-x86_64-linux/ext" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/3.3.0/gems/nokogiri-1.16.7-x86_64-linux/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/3.3.0/gems/nokogiri-1.16.7-x86_64-linux/gumbo-parser" />
         </CLASSES>
         <JAVADOC />
         <SOURCES>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/3.3.0/gems/nokogiri-1.16.7-arm64-darwin/bin" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/3.3.0/gems/nokogiri-1.16.7-arm64-darwin/ext" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/3.3.0/gems/nokogiri-1.16.7-arm64-darwin/lib" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/3.3.0/gems/nokogiri-1.16.7-arm64-darwin/gumbo-parser" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/3.3.0/gems/nokogiri-1.16.7-x86_64-linux/bin" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/3.3.0/gems/nokogiri-1.16.7-x86_64-linux/ext" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/3.3.0/gems/nokogiri-1.16.7-x86_64-linux/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/3.3.0/gems/nokogiri-1.16.7-x86_64-linux/gumbo-parser" />
         </SOURCES>
         <excluded>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/3.3.0/gems/nokogiri-1.16.7-arm64-darwin/bin" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/3.3.0/gems/nokogiri-1.16.7-arm64-darwin/ext" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/3.3.0/gems/nokogiri-1.16.7-arm64-darwin/gumbo-parser" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/3.3.0/gems/nokogiri-1.16.7-x86_64-linux/bin" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/3.3.0/gems/nokogiri-1.16.7-x86_64-linux/ext" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/3.3.0/gems/nokogiri-1.16.7-x86_64-linux/gumbo-parser" />
         </excluded>
       </library>
     </orderEntry>
@@ -2974,20 +2974,20 @@
               <option value="lib" />
             </list>
           </option>
-          <option name="url" value="file://$MODULE_DIR$/vendor/bundle/ruby/3.3.0/gems/sqlite3-2.1.0-arm64-darwin" />
+          <option name="url" value="file://$MODULE_DIR$/vendor/bundle/ruby/3.3.0/gems/sqlite3-2.1.0-x86_64-linux-gnu" />
           <option name="version" value="2.1.0" />
         </properties>
         <CLASSES>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/3.3.0/gems/sqlite3-2.1.0-arm64-darwin/ext" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/3.3.0/gems/sqlite3-2.1.0-arm64-darwin/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/3.3.0/gems/sqlite3-2.1.0-x86_64-linux-gnu/ext" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/3.3.0/gems/sqlite3-2.1.0-x86_64-linux-gnu/lib" />
         </CLASSES>
         <JAVADOC />
         <SOURCES>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/3.3.0/gems/sqlite3-2.1.0-arm64-darwin/ext" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/3.3.0/gems/sqlite3-2.1.0-arm64-darwin/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/3.3.0/gems/sqlite3-2.1.0-x86_64-linux-gnu/ext" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/3.3.0/gems/sqlite3-2.1.0-x86_64-linux-gnu/lib" />
         </SOURCES>
         <excluded>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/3.3.0/gems/sqlite3-2.1.0-arm64-darwin/ext" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/3.3.0/gems/sqlite3-2.1.0-x86_64-linux-gnu/ext" />
         </excluded>
       </library>
     </orderEntry>
