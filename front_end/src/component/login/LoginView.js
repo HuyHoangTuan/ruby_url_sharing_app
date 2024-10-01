@@ -1,19 +1,56 @@
-import React from "react";
+import React, {useRef, useState, useTransition} from "react";
 import {Box, Button, Grid2, Paper, TextField, Typography} from "@mui/material";
 import {ROUTES} from "../../constant/Route";
 import {useNavigate} from "react-router-dom";
+import {LoadingButton} from "@mui/lab";
+import {sendRequest} from "../../util/HttpUtil";
+import {ENDPOINT} from "../../constant/Endpoint";
+import {cacheUsername, getCachedUsername} from "../../util/LoginUtil";
+
 function LoginView()
 {
     const navigate = useNavigate();
+    const [sending, setSending] = useState(false);
+    const [isTransition, startTransition] = useTransition();
+    let username = getCachedUsername();
+    let password = "";
 
-    function checkError(field)
-    {
+    const checkError = (field) => {
         return false;
     }
 
-    function redirectToRegister()
-    {
-        navigate(ROUTES.REGISTER.PATH);
+    const redirectToRegister = (event) => {
+        event.preventDefault();
+        startTransition(() => {
+            navigate(ROUTES.REGISTER.PATH);
+        });
+    }
+
+    const submitLoginForm = (event) => {
+        event.preventDefault();
+        setSending(true);
+        cacheUsername(username);
+
+        let request = sendRequest(
+            {
+                method: "post",
+                url: ENDPOINT.LOGIN,
+                data: {
+                    authorization: {
+                        username: username,
+                        password: password
+                    }
+                }
+            }
+        );
+
+        request.then((response) => {
+            setSending(false);
+            console.log(response);
+        }).catch((error) => {
+            setSending(false);
+            console.log(error);
+        })
     }
 
     return (
@@ -39,7 +76,7 @@ function LoginView()
                     variant={"h3"}
                     align={"center"}
                 >
-                    <b>Login</b>
+                    <b>Sign In</b>
                 </Typography>
                 <Box>
                     <Grid2
@@ -53,6 +90,8 @@ function LoginView()
                                 fullWidth={true}
                                 id={"outlined-required"}
                                 label={"Username"}
+                                defaultValue={username}
+                                onChange={(event) => {username = event.target.value}}
                             />
                         </Grid2>
                         <Grid2 size={12}>
@@ -62,23 +101,28 @@ function LoginView()
                                 fullWidth={true}
                                 id={"outlined-required"}
                                 label={"Password"}
+                                type="password"
+                                onChange={(event) =>{password=event.target.value}}
                             />
                         </Grid2>
                         <Grid2 size={12}>
-                            <Button
+                            <LoadingButton
+                                loading={sending}
                                 fullWidth={true}
                                 variant={"contained"}
                                 size={"large"}
+                                onClick={submitLoginForm}
+                                disabled={isTransition}
                             >
                                 <b>Login</b>
-                            </Button>
+                            </LoadingButton>
                         </Grid2>
                         <Grid2 size={12}>
                             <Typography
                                 variant={"body1"}
                                 align={"center"}
                             >
-                                Have yet to register? <Button variant={"text"} onClick={redirectToRegister}>Register</Button>
+                                Have yet to register?<Button variant={"text"} onClick={redirectToRegister} disabled={isTransition}>Register</Button>
                             </Typography>
                         </Grid2>
                     </Grid2>

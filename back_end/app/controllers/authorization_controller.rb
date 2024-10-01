@@ -9,7 +9,7 @@ class AuthorizationController < ApplicationController
     public
         def login
             @account = Account.find_by(username: accept_params[:username])
-            if @account.nil? || (!@account.nil? && @account.authenticate(accept_params[:password]).nil?)
+            if @account.nil? || (!@account.nil? && (@account.authenticate(accept_params[:password]).nil? || @account.authenticate(accept_params[:password]) == false))
                 head :unauthorized
             else
                 token = Auth.issue_token(id: @account.id)
