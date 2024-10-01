@@ -7,13 +7,18 @@ function RegisterView()
 {
     const navigate = useNavigate();
     const [isTransition, startTransition] = useTransition();
+    const [error, setError] = useState({});
+
+    let username = "";
+    let password = "";
+    let rePassword = "";
 
     const checkError = (field) => {
         return false;
     }
 
-    const checkRePassword = (password, rePassword) => {
-        return false;
+    const checkRePassword = () => {
+        return password === rePassword;
     }
 
     const redirectToLogin = (event) => {
@@ -64,6 +69,7 @@ function RegisterView()
                                 fullWidth={true}
                                 id={"outlined-required"}
                                 label={"Username"}
+                                onChange={(event) => {username = event.target.value}}
                             />
                         </Grid2>
                         <Grid2 size={12}>
@@ -73,7 +79,8 @@ function RegisterView()
                                 fullWidth={true}
                                 id={"outlined-required"}
                                 label={"Password"}
-                                password={true}
+                                type="password"
+                                onChange={(event) =>{password=event.target.value}}
                             />
                         </Grid2>
                         <Grid2 size={12}>
@@ -83,7 +90,8 @@ function RegisterView()
                                 fullWidth={true}
                                 id={"outlined-required"}
                                 label={"Re-password"}
-                                password={true}
+                                type="password"
+                                onChange={(event) =>{rePassword=event.target.value}}
                             />
                         </Grid2>
                         <Grid2 size={12}>
